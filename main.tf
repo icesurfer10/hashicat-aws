@@ -1,6 +1,11 @@
 provider "aws" {
   version = "~> 2.0"
   region  = var.region
+  
+  tags = {
+    Department = "Dept of Tom"
+    Billable = true
+  }
 }
 
 resource aws_vpc "hashicat" {
